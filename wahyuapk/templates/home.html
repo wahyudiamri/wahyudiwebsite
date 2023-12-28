@@ -1,75 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>Your Awesome Shop</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
         }
 
         header {
-            text-align: center;
+            background-color: #169c91;
+            color: #fff;
             padding: 10px;
-            background-color: #f2f2f2;
+            text-align: center;
         }
 
         nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
-            padding: 14px 20px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #ddd;
-            color: black;
+            color: #ffcc00;
         }
 
-        main {
+        #product-showcase {
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
 
-        footer {
-            text-align: center;
+        .product {
+            width: 200px;
             padding: 10px;
-            background-color: #f2f2f2;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .produk {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .produk-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            width: 300px;
+        }
+        .produk-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .produk-item-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .produk-item-buttons button {
+            width: 30%;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .beli-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .pesan-button {
+            background-color: #2196F3;
+            color: white;
+        }
+        .keranjang-button {
+            background-color: #FF9800;
+            color: white;
         }
     </style>
 </head>
-
 <body>
 
     <header>
-        <h1>Your Website Header</h1>
+        <h1>TOKO VAPE STYLE</h1>
     </header>
 
     <nav>
-        <a href="/">Home</a>
-        <a href="kontak">Contact</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="keranjang">keranjang</a></li>
+            <li><a href="Checkout">Checkout</a></li>
+            <li><a href="pesan">pesan</a></li>
+            <li><a href="login">login</a></li>
+        </ul>
     </nav>
+    <div class="produk">
+        <div class="produk-item">
+            <img src="https://images.tokopedia.net/img/JFrBQq/2022/11/16/46a5dec1-b85e-423a-87a2-496387294f32.jpg" alt="Produk 1">
+            <h3>Produk 1</h3>
+            <h3>11 Merk Pod dan Mod Vape Terbaik,</h3>
+            <p>Harga: RP.300k</p>
+            <div class="produk-item-buttons">
+                <button onclick="window.location.href='Checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+            </div>
+        </div>
+        <div class="produk-item">
+            <img src="https://cdn1.productnation.co/stg/sites/5/5e69b3bbb06ce.jpeg" alt="Produk 2">
+            <h3>Produk 2</h3>
+            <h3>5 Rekomendasi Vapor Terbaik Untuk Pemula</h3>
+            <p>Harga: RP.200k</p>
+            <div class="produk-item-buttons">
+                <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+            </div>
+        </div>
 
-    <main>
-        <h2>Welcome to Your Website!</h2>
-        <p>This is the main content of your home page.</p>
-    </main>
+        <div class="produk-item">
+            <img src="https://id-test-11.slatic.net/p/3d0c585f9e21aa235e05b513b02f0b83.png" alt="Produk 3">
+            <h3>Produk 3</h3>
+            <h3>Paket Lengkap RCO RDA KIT 90W Vapor</h3>
+            <p>Harga: RP.350k</p>
+            <div class="produk-item-buttons">
+                <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+            </div>
+        </div>
+
+        <div class="produk-item">
+            <img src="https://images.tokopedia.net/img/cache/700/hDjmkQ/2021/11/18/0983f599-b43d-40eb-9da0-45b51f7ef738.jpg" alt="Produk 4">
+            <h3>Produk 4</h3>
+            <h3>New LIQUID VAPE PREMIUM</h3>
+            <p>Harga: RP.80k</p>
+            <div class="produk-item-buttons">
+                <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+            </div>
+        </div>
+
+        <div class="produk-item">
+            <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/12/18/2950fae4-be64-4f46-85b2-48ab729b535e.jpg" alt="Produk 5">
+            <h3>Produk 5</h3>
+            <h3>Jual Mix Max Sour Guava 100ml</h3>
+            <p>Harga: RP.100k</p>
+            <div class="produk-item-buttons">
+                <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+            </div>
+        </div>
+
+        <div class="produk-item">
+            <img src="https://static.jakmall.id/2022/02/images/products/9c1198/detail/mix-max-sour-guava-100ml-liquid-vape-freebase.jpeg" alt="Produk 6">
+            <h3>Produk 6</h3>
+            <h3>PERASA] TCKT MANGO 60 M L</h3>
+            <p>Harga: RP.130k</p>
+            <div class="produk-item-buttons">
+                <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+            </div>
+        </div>
+
+        <div class="produk-item">
+            <img src="https://lzd-img-global.slatic.net/g/p/226c2ac32cfd0dfeafab1a7918cc4d5f.jpg_720x720q80.jpg" alt="Produk 7">
+            <h3>Produk 7</h3>
+            <h3>Hardcase Mod Hexohm Mecha Digital Mod Box Mod Vapor Vape</h3>
+            <p>Harga: RP.300k</p>
+            <div class="produk-item-buttons">
+                <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+            </div>
+        </div>
+
+        <div class="produk-item">
+            <img src="https://lzd-img-global.slatic.net/g/p/61f5efbcada8e60bfef0c463bab0e81e.jpg_720x720q80.jpg" alt="Produk 8">
+            <h3>Produk 8</h3>
+            <h3>Tool Alat Modifikasi Vape - Vaporizer Tool Kit Set Box DIY</h3>
+            <p>Harga: RP.400k</p>
+            <div class="produk-item-buttons">
+                <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+            </div>
+        </div>
+
+        <div class="produk-item">
+            <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/11/30/608a537b-10d2-4fed-b75c-224eb2750ad0.jpg" alt="Produk 9">
+            <h3>Produk 9</h3>
+            <h3>Jual Authentic Lost Vape Ursa Nano Cartridge - 0.8ohm </h3>
+            <p>Harga: RP.80k</p>
+            <div class="produk-item-buttons">
+                <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+            </div>
+        </div>
+
+        <div class="produk-item">
+            <img src="https://id-test-11.slatic.net/p/7e6ec54784dbc023d23dbd67440cd063.jpg" alt="Produk 10">
+            <h3>Produk 10</h3>
+            <h3>Magic Stick CW 6-in-1 Wire Coiling Tool</h3>
+            <p>Harga: RP.450k</p>
+            <div class="produk-item-buttons">
+                <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+            </div>
+        </div>
+
+        <div class="produk-item">
+            <img src="https://images.tokopedia.net/img/cache/700/product-1/2019/11/10/1979651/1979651_c8848a8a-3b08-425e-8f38-2c1279604707_700_700.jpg" alt="Produk 11">
+            <h3>Produk 11</h3>
+            <h3>Jual Magic Stick 6in1 Alat Coiling Lengkap</h3>
+            <p>Harga: RP.250k</p>
+            <div class="produk-item-buttons">
+                <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+            </div>
+        </div>
+
+        <div class="produk-item">
+            <img src="https://images.tokopedia.net/img/cache/700/product-1/2020/1/4/60477520/60477520_910866b4-4285-42a1-aa7b-92c65e27b220_970_970.jpg" alt="Produk 12">
+            <h3>Produk 12</h3>
+            <h3>Pinset Keramic Coil - Alat Pengganti Kapas</h3>
+            <p>Harga: RP.100K</p>
+            <div class="produk-item-buttons">
+                <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
+                <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
+                <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
+            </div>
+        </div>
+
+    </div>
 
     <footer>
-        <p>&copy; 2023 Your Website. All rights reserved.</p>
+        <p>&copy; 2023 Your Awesome Shop. All rights reserved.</p>
     </footer>
 
-</body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const products = document.querySelectorAll(".product");
 
+            products.forEach((product, index) => {
+                setTimeout(() => {
+                    product.style.opacity = "1";
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
 </html>
